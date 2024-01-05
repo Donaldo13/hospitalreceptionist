@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style2.css">
+  <title>Receptionist Login - House of Health</title>
+  <script src="script2.js"></script>
+</head>
+<body>
+  <div class="login-container">
+    <img src="medical_background.jpg" alt="Medical Field Background">
+    <form id="login-form" action="verify_login.php" method="post">
+      <h1>House of Health Receptionist Login</h1>
+      <div class="form-group">
+        <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+        <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+      </div>
+      <div class="form-group">
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <input type="number" id="receptionist-id" name="receptionist-id" placeholder="Receptionist ID" required>
+      </div>
+      <div class="form-group">
+        <label for="email-confirmation">Email Confirmation:</label>
+        <input type="checkbox" id="email-confirmation" name="email-confirmation">
+      </div>
+      <div class="form-group">
+        <label for="transaction-type">Transaction Type:</label>
+        <select name="transaction-type" id="transaction-type">
+          <option value="search-account" selected>Search Account</option>
+          <option value="book-appointment">Book Appointment</option>
+          <option value="cancel-appointment">Cancel Appointment</option>
+          <option value="request-procedures">Request Procedures</option>
+          <option value="cancel-procedures">Cancel Procedures</option>
+          <option value="update-information">Update Patient Information</option>
+          <option value="create-account">Create New Patient Account</option>
+        </select>
+      </div>
+      <button type="submit" id="login-button">Login</button>
+      <button type="reset" id="reset-button">Reset</button>
+    </form>
+    <div id="message-container"></div>
+  </div>
+</body>
+</html>
